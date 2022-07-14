@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ApiService} from "../api.service";
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public page: any;
+  public jobsData: any;
+  constructor(public api: ApiService) {}
 
-  constructor() {}
-
+  search(){
+    this.api.getJobs(this.page).subscribe(result => {
+      this.jobsData= result;
+    });
+  }
 }
