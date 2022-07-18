@@ -1,24 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Portal-Job
+      Job-Mada
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card mode="ios" *ngFor="let item of jobsData" >
+  <ion-card class="container" mode="ios" *ngFor="let item of jobsData">
     <ion-card-header>
-      <h4>{{item.title}}</h4>
+      <h4 id="title" >{{item.title}}</h4>
+      <i id="enterprise" >{{item.enterprise}}</i>
     </ion-card-header>
     <ion-card-content>
-      <i>{{item.contract}}</i>
-      <p>{{item.description}}</p>
+      <i id="contract" >{{item.contract}}</i>
+      <p id="description" >{{item.description}}</p>
     </ion-card-content>
   </ion-card>
-
-  <ion-item>
-    <ion-input [(ngModel)]="page" placeholder="page"></ion-input>
-  </ion-item>
-  <ion-button expand="block" (click)="search()" >Search</ion-button>
 </ion-content>
+
+<ion-footer [translucent]="true" >
+  <ion-item>
+    <ion-list-header class="pagination" >
+      <ion-button class="list-header-1" expand="block" (click)="previous()">Previous</ion-button>
+      <h4 class="list-header-2" >{{page}}</h4>
+      <ion-button class="list-header-3" expand="block" (click)="next()">Next</ion-button>
+    </ion-list-header>
+  </ion-item>
+</ion-footer>

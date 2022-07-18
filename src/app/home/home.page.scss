@@ -1,27 +1,33 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+*{
+  margin:0;
+  padding:0;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-header ion-toolbar {
+  padding: 0 2%;
 }
 
 #container a {
   text-decoration: none;
+}
+
+ion-list-header {
+  text-align: center;
+}
+
+.list-header-1 {
+  width: 35%;
+}
+
+.list-header-2 {
+  width: 30%;
+}
+
+.list-header-3 {
+  width: 35%;
+}
+
+.container {
+  margin: 15px;
+  padding: 3%;
 }
