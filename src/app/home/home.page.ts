@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
 import {ApiService} from '../api.service';
-import { IonModal } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,6 @@ import { IonModal } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  @ViewChild(IonModal) modal: IonModal;
   public page: any = 1;
   public jobsData: any;
 
@@ -16,10 +14,6 @@ export class HomePage {
     this.api.getJobs(this.page).subscribe(result => {
       this.jobsData = result;
     });
-  }
-
-  cancel() {
-    this.modal.dismiss(null, 'cancel');
   }
 
   next() {

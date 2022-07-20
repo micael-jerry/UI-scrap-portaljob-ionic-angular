@@ -9,12 +9,21 @@
 <ion-content>
   <ion-card class="container" mode="ios" *ngFor="let item of jobsData">
     <ion-card-header>
-    <h4 id="title" >{{item.title}}</h4>
-      <i id="enterprise" >{{item.enterprise}}</i>
+      <h4 class="title" >{{item.title}}</h4>
+      <i class="company" >{{item.company}}</i>
     </ion-card-header>
     <ion-card-content>
-      <i id="contract" >{{item.contract}}</i>
-      <p>{{item.description}}</p>
+      <i class="contract" >{{item.contract}}</i>
+      <ion-accordion-group>
+        <ion-accordion value="description">
+          <ion-item slot="header">
+            <ion-label>Description</ion-label>
+          </ion-item>
+          <div class="ion-accordio-content" slot="content">
+            <p>{{item.description}}</p>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
     </ion-card-content>
   </ion-card>
 </ion-content>
@@ -22,9 +31,9 @@
 <ion-footer [translucent]="true" >
   <ion-item>
     <ion-list-header class="pagination" >
-      <ion-button class="list-header-1" expand="block" (click)="previous()">Previous</ion-button>
-      <h4 class="list-header-2" >{{page}}</h4>
-      <ion-button class="list-header-3" expand="block" (click)="next()">Next</ion-button>
+      <ion-button class="list-footer-1" expand="block" (click)="previous()">Previous</ion-button>
+      <h4 class="list-footer-2" >{{page}}</h4>
+      <ion-button class="list-footer-3" expand="block" (click)="next()">Next</ion-button>
     </ion-list-header>
   </ion-item>
 </ion-footer>

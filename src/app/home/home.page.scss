@@ -3,6 +3,10 @@
   padding:0;
 }
 
+ion-header {
+  background: #272727;
+  color: #FAFAFA;
+}
 ion-header ion-toolbar {
   padding: 0 2%;
 }
@@ -15,19 +19,51 @@ ion-list-header {
   text-align: center;
 }
 
-.list-header-1 {
-  width: 35%;
-}
-
-.list-header-2 {
-  width: 30%;
-}
-
-.list-header-3 {
-  width: 35%;
-}
-
 .container {
   margin: 15px;
   padding: 3%;
+}
+
+.title {
+  color: #EEEEEE;
+  margin-bottom: 3%;
+}
+.company {
+  color: #BDBDBD;
+  margin-bottom: 2.5%;
+  text-transform: uppercase;
+}
+.contract {
+  color: #9e9e9e;
+  margin-bottom: 1.5%;
+  text-transform: lowercase;
+}
+
+ion-accordion ion-item ion-label {
+  color: #757575;
+}
+.ion-accordio-content {
+  background-color: #212121;
+  padding: 2%;
+}
+
+ion-footer {
+  background: #272727;
+}
+
+ion-button {
+  color: #E0E0E0;
+}
+
+.list-footer-1 {
+  width: 35%;
+}
+
+.list-footer-2 {
+  width: 30%;
+  color: #BDBDBD;
+}
+
+.list-footer-3 {
+  width: 35%;
 }
