@@ -9,12 +9,12 @@
 <ion-content>
   <ion-card class="container" mode="ios" *ngFor="let item of jobsData">
     <ion-card-header>
-      <h4 id="title" >{{item.title}}</h4>
+    <h4 id="title" >{{item.title}}</h4>
       <i id="enterprise" >{{item.enterprise}}</i>
     </ion-card-header>
     <ion-card-content>
       <i id="contract" >{{item.contract}}</i>
-      <p id="description" >{{item.description}}</p>
+      <p>{{item.description}}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

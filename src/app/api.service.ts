@@ -8,6 +8,6 @@ export class ApiService {
   constructor(public http: HttpClient) {}
 
   getJobs(page) {
-    return this.http.get('http://localhost:5000/api-portaljob?page=' + page);
+    return this.http.get('https://scrapping-portaljob.herokuapp.com/api-portaljob?page=' + page);
   }
 }
